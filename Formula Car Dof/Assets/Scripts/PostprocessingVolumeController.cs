@@ -25,7 +25,6 @@ public class PostprocessingVolumeController : MonoBehaviour
 
     public void SetAperture()
     {
-        Debug.Log(apertureSlider.value);
         dof.aperture.value = apertureSlider.value;
     }
 }
