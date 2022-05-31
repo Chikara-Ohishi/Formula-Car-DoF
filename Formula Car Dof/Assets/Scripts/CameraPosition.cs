@@ -25,4 +25,9 @@ public class CameraPosition : MonoBehaviour
     {
         mainCamera.transform.localPosition = new Vector3(0, 1, -distanceSlider.value);
     }
+
+    public void SetPosition()
+    {
+        transform.rotation = Quaternion.Euler(new Vector3(0, positionSlider.value, 0));
+    }
 }

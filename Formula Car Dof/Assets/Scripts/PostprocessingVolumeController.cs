@@ -7,6 +7,7 @@ using UnityEngine.Rendering.PostProcessing;
 public class PostprocessingVolumeController : MonoBehaviour
 {
     [SerializeField] private Slider apertureSlider;
+    [SerializeField] private Slider distanceSlider;
     [SerializeField] private PostProcessVolume volume;
 
     DepthOfField dof;
@@ -26,5 +27,10 @@ public class PostprocessingVolumeController : MonoBehaviour
     public void SetAperture()
     {
         dof.aperture.value = apertureSlider.value;
+    }
+
+    public void SetDistance()
+    {
+        dof.focusDistance.value = distanceSlider.value;
     }
 }
