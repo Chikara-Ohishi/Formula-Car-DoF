@@ -23,7 +23,7 @@ public class CameraPosition : MonoBehaviour
 
     public void SetDistance()
     {
-        mainCamera.transform.localPosition = new Vector3(0, 1, -distanceSlider.value);
+        mainCamera.transform.localPosition = new Vector3(0, 2.5f, -distanceSlider.value);
     }
 
     public void SetPosition()
