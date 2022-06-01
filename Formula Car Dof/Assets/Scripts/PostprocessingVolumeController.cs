@@ -8,6 +8,7 @@ public class PostprocessingVolumeController : MonoBehaviour
 {
     [SerializeField] private Slider apertureSlider;
     [SerializeField] private Slider distanceSlider;
+    [SerializeField] private Slider hightSlider;
     [SerializeField] private PostProcessVolume volume;
 
     DepthOfField dof;
@@ -31,6 +32,7 @@ public class PostprocessingVolumeController : MonoBehaviour
 
     public void SetDistance()
     {
-        dof.focusDistance.value = distanceSlider.value;
+        Vector3 vec = new Vector3(0, hightSlider.value, distanceSlider.value);
+        dof.focusDistance.value = vec.magnitude;
     }
 }
